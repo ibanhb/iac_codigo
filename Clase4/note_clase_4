@@ -1,5 +1,5 @@
-En esta clase se vio la conformacion de un archivo docker file el cual esta conectado a un volumen logico.
-Se explica desde que imagen base se construye el servicio que se va a utilizar.
-se verifica el puerto de exposición para ser utilizado en este ejercicio.
-Se deja documentado el docker file y la carpeta donde esta el index.html de este ejercicio.
-Se sigue la ruta del roadmap de docker|.
+1 En esta clase se vio la conformacion de un archivo docker file el cual esta conectado a un volumen logico.
+2 Se explica desde que imagen base se construye el servicio que se va a utilizar.
+3 se verifica el puerto de exposición para ser utilizado en este ejercicio.
+4 Se deja documentado el docker file y la carpeta donde esta el index.html de este ejercicio.
+5 Se sigue la ruta del roadmap de docker|.
