@@ -1,7 +1,5 @@
-En esta clase se dio la presentación de lo que es la Infraestructura como codigo
-Se da una las bases de la infraestructura como codigo.
-Se exponen las el que, por que y para que se utiliza la infraestructura como codigo.
-Se explica una comparativa de como los tipos de empresas o posibles candidatos a que utilisen la ICC.
-por ultimo se muestra como se puede utilizar esta metodologia en ambientes de trabajo.
-
-Se agregamparte de la presentación
+En esta clase se ve los inicios de la infraestructura como codigo.
+Se ve como puede empezar a utilizar la ICC en un ambiete local con el uso de Docker.
+Se habla de la diferencia entre los que puede ser una maquina fisica, una maquina virtual y contenedores.
+Se habla un poco de la historia de de los contenedores y la empresa Docker y como surgio.
+Se habla de las partes fundamentales del uso de contenedores y la parte social
