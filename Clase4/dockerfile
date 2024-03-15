@@ -1,0 +1,19 @@
+FROM nginx:1.23-alpine 
+# descarga la imagen 
+
+WORKDIR /app 
+#define el directorio de trabajo
+
+VOLUME /app 
+#define el volumen a utilizar
+
+#COPY index.html ./
+COPY /app/index.html /usr/share/nginx/html
+#copia la ruta del archivo a utilizar
+
+EXPOSE 80
+#expone el puerto por donde se va a conectar el contenedor al Host
+
+CMD ["nginx", "-g", "daemon off;"]
+#ejecuta valores para que el contenedor trabaje 
+
