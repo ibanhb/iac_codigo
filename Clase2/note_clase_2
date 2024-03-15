@@ -1,0 +1,5 @@
+En esta clase se ve los inicios de la infraestructura como codigo.
+Se ve como puede empezar a utilizar la ICC en un ambiete local con el uso de Docker.
+Se habla de la diferencia entre los que puede ser una maquina fisica, una maquina virtual y contenedores.
+Se habla un poco de la historia de de los contenedores y la empresa Docker y como surgio.
+Se habla de las partes fundamentales del uso de contenedores y la parte social
