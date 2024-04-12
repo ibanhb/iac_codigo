@@ -1,0 +1,9 @@
+En esta clase se explican ejemplos que pueden ser productivos y que contienen multiples servicios.
+Se encuentran divididos en servicios, red, volumenes.
+El primer ejemplo es un servisio de una pagina web con el CMS Wordpress para ser configurado de primera instalacio, se conecta a una base de datos con postgres version 14, se integra tambien la utilizacion de Pgadmin para administrar la base de datos desde y como monitor de servicios se utiliza Grafana.
+Los servicios de wordpress, pgadmin, y grafana son independientes pero se utilizan para poder hacer una correcta administración del proyecto.
+En el segundo ejemplo se explica un proyecto de votacion electronica donde se utilizan un servicio para votacion que trabaja con replicas, servicios de mejora on redis en paralelos y que se puedan conectar a una base de datos que recabara las votaciones, estos servicios utilizan un servicio worker para hacer trbajo y utilizacion de metodos que seran utilizados en en servicio de resultados y por ultimo seran representados en el servicio de visualización.
+Este ejmplo tiene dos redes definidas un o para Frontend y otro para backend siendo el servicio worker el unico que esta conectado a las dos redes.
+Solo los servicios de votacion, redis y worker esta conectados a la red Frontend y los servicios de base de datos, resultados y worker estan conectados a la red backend
+Se utilizan caracteristicas especiles para la implementacion de este ´royecto como lo son utilizar servicios en paralelo y de forma horizontal,  así como los tiempos de espera para actualizacion o inicio, y politicas de reseteo en caso de que un servicio se cuelgue, estos tiempo o caracteristicas son muy utilizadas en proyectos donde sus servicios depende de la inicializacion de otro para poder funcionar correctamente.
+Se mantiene de manera separada el volumen de la base de datos ya que pude ser necesario el respaldo de los datos.

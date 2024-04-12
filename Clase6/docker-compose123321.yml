@@ -1,0 +1,63 @@
+#version: "3.9"
+services:
+  # Servicio web WordPress
+  wordpress:
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    volumes:
+      - wordpress-data:/var/www/html
+    depends_on:
+      - db
+
+  # Base de datos
+  db:
+    image: postgres:14
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    networks:
+      - postgres-net
+
+  # Grafana (configurado para conectarse a la base de datos)
+  grafana:
+    image: grafana/grafana:8.4.4
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+    depends_on:
+      - wordpress
+      - db
+    environment:
+      GF_SECURITY_ADMIN_PASSWORD: password
+      GF_DATASOURCE_NAME: wordpress
+      GF_DATASOURCE_TYPE: postgresql
+      GF_DATASOURCE_USER: postgres
+      GF_DATASOURCE_PASSWORD: password
+      GF_DATASOURCE_URL: postgres://postgres:password@db:5432/wordpress
+
+  # pgAdmin (para administrar la base de datos)
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - "54321:80"
+    depends_on:
+      - db
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "pgadmin@example.com"
+      PGADMIN_DEFAULT_PASSWORD: "my-password"
+      PGADMIN_SERVER_PORT: 5432
+    networks:
+      - postgres-net
+
+networks:
+  postgres-net:
+    #external: true
+
+volumes:
+  wordpress-data:
+  db-data:
+  grafana-data:

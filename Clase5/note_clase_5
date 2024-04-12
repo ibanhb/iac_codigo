@@ -1,0 +1,4 @@
+En esta clase se vio la conformacion de un archivo docker compose donde se definen servicios y servicios, un servidor web nginx y una base de datos.
+Se define la creacion de una red privada para este ejercicio del tipo brige que pconecta la conexion de docker con la lan del equipo host permitiendo la comunicacion a internet.
+Se explican las partes importantes del documento como lo son las imagenes utilizadas para el servidor web y la base de datos, variables de entorno y en este caso el driver utilizado por la red y los puertos utilizados para su conectividad del host al contenedor.
+Se explica las diferencias que existen entre dockerfile y los utilizados con docker compose.

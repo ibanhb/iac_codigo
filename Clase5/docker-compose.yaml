@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    image: nginx
+    ports:
+      - "80:80"
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+
+networks:
+  my-net1:
+    driver: bridge
